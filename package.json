@@ -1,0 +1,27 @@
+{
+  "name": "iex_stock_api",
+  "version": "1.0.0",
+  "description": "A simple stock market data fetching API",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/IanMiranda43/IEXstockMarketAPI.git"
+  },
+  "author": "Ian Miranda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IanMiranda43/IEXstockMarketAPI/issues"
+  },
+  "homepage": "https://github.com/IanMiranda43/IEXstockMarketAPI#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.5"
+  },
+  "devDependencies": {
+    "eslint": "^7.31.0"
+  }
+}
