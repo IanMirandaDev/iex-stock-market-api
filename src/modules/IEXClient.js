@@ -1,10 +1,11 @@
 import process from 'process';
 import axios from 'axios';
 
-async function Connection(url) {
+function Connection(url) {
 	return axios.get(url, {
 		params: {
-			token: process.env.IEX_SECRET_TOKEN
+			token: process.env.IEX_SECRET_TOKEN,
+            displayPercent: true
 		}
 	});
 }
