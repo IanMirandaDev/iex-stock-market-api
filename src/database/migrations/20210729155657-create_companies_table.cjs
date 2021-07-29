@@ -9,10 +9,17 @@ module.exports = {
                 type: Sequelize.DataTypes.INTEGER(11),
                 autoIncrement: true,
                 primaryKey: true,
-                allowNull: false
+                allowNull: false,
+                unique: true
             },
-			companyName: Sequelize.DataTypes.STRING(255),
-			symbol: Sequelize.DataTypes.STRING(255),
+			companyName: {
+                type: Sequelize.DataTypes.STRING(255),
+                unique: true
+            },
+			symbol: {
+                type: Sequelize.DataTypes.STRING(255),
+                unique: true
+            },
 			industry: Sequelize.DataTypes.STRING(255),
 			website: Sequelize.DataTypes.STRING(255),
 			employees: Sequelize.DataTypes.INTEGER(11),

@@ -1,6 +1,7 @@
-import DataTypes from 'sequelize';
-import Model from 'sequelize';
-import sequelize from '../../database';
+import Sequelize from 'sequelize';
+import sequelize from '../../database/index.js';
+
+const { Model, DataTypes } = Sequelize;
 
 class Company extends Model {}
 

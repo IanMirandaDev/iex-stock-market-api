@@ -9,7 +9,8 @@ const databaseConfig = {
 		'password': process.env.DB_PASS_DEV,
 		'host': process.env.DB_HOST_DEV,
 		'port': process.env.DB_PORT_DEV,
-		'dialect': 'mysql'
+		'dialect': 'mysql',
+        'logging': false
 	},
 	'production': {
 		'database': process.env.DB_DATABASE_PROD,
@@ -17,7 +18,8 @@ const databaseConfig = {
 		'password': process.env.DB_PASS_PROD,
 		'host': process.env.DB_HOST_PROD,
 		'port': process.env.DB_PORT_PROD,
-		'dialect': 'mysql'
+		'dialect': 'mysql',
+        'logging': false
 	},
 };
 

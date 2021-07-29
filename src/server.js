@@ -4,7 +4,6 @@ import express from 'express';
 import routes from './routes.js';
 import path from 'path';
 import exphbs from 'express-handlebars';
-import sequelize from './database/index.js';
 
 const app = express();
 const port = process.env.PORT || 3000;
