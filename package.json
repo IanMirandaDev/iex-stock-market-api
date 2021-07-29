@@ -1,5 +1,5 @@
 {
-  "name": "iex_stock_api",
+  "name": "iex_stock_market_api",
   "version": "1.0.0",
   "description": "A simple stock market data fetching API",
   "main": "src/server.js",
@@ -9,10 +9,6 @@
     "dev": "NODE_ENV='development' nodemon src/server.js",
     "prestart": "NODE_ENV='production' npx sequelize db:migrate",
     "start": "NODE_ENV='production' node src/server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/IanMiranda43/IEXstockMarketAPI.git"
   },
   "author": "Ian Miranda",
   "license": "ISC",
