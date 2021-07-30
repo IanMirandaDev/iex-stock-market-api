@@ -8,6 +8,7 @@ At now we have just an simple system of requests for companies and yours quotes 
 * `axios` lib to make HTTP requests
 * `express-handlebars` to server side rendering
 * `Sequelize ORM` to manage the SQL database
+* `Socket.io` to real time updates
 
 _at now are configured to use MySQL database_
 
@@ -72,7 +73,9 @@ In the project folder run de following code. This will create a `node_modules` f
 
 ### Start the server:
 
-Before start, the script will create an database connection, run the migrations and then start the application at the port setted on the `.env` file.
+The script will connect to database, run the migrations and then start the application at the port setted on the `.env` file.
+
+_Before exec it, make sure that your DB is running_
 
 #### As development environment:
 
@@ -85,6 +88,13 @@ Before start, the script will create an database connection, run the migrations 
 ```bash
   npm start
 ```
+
+### Access the home page
+
+This can be found by access <a href="http://localhost:3000" target="blank">localhost:`PORT`<a>
+
+_The `PORT` is that you setted into the `.env` file. Default value is 3000_
+
 ---
 
 ## License

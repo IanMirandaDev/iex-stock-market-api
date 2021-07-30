@@ -11,7 +11,12 @@ Company.init({
 	industry: DataTypes.STRING(255),
 	website: DataTypes.STRING(255),
 	employees: DataTypes.INTEGER(11),
-	description: DataTypes.TEXT
+	description: DataTypes.TEXT,
+	lastUpdate: { 
+		type: DataTypes.DATE,
+		default: Sequelize.NOW,
+		allowNull: false
+	}
 }, {
 	sequelize, 
 	modelName: 'companies'

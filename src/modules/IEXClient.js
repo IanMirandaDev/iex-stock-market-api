@@ -5,7 +5,7 @@ function Connection(url) {
 	return axios.get(url, {
 		params: {
 			token: process.env.IEX_SECRET_TOKEN,
-            displayPercent: true
+			displayPercent: true
 		}
 	});
 }

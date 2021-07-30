@@ -19,35 +19,38 @@
 <div class="companyData">
 
     <div class="row">
-        <div class="col-md-4 mb-4">
+        <div class="col-md-5 mb-4">
             <div class="companyTitle">
-                <h4 class="companyName">{{{ title }}}</h4>
-                <h2 class="companyQuoteValue">{{{ quoteData.latestPrice }}} <strong class="{{{ quoteData.quoteChangeClassView }}}">{{{ quoteData.quoteChange }}}</strong></h2>
+                <h4 class="companyName" id="companyName">{{{ title }}}</h4>
+
+                <div class="row">
+                    <h2 class="companyQuoteValue" id="quoteLatestPrice">{{{ quoteData.latestPrice }}} <strong id="quoteChange" class="{{{ quoteData.quoteChangeClassView }}}">{{{ quoteData.quoteChange }}}</strong></h2>
+                </div>
             </div>
 
             <table class="companyQuoteData">
                 <tbody>
                     <tr>
                         <td>Previous close</td>
-                        <td>{{{ quoteData.previousClose }}}</td>
+                        <td id="quotePreviousClose">{{{ quoteData.previousClose }}}</td>
                     </tr>
                     <tr>
                         <td>Previous volume</td>
-                        <td>{{{ quoteData.previousVolume }}}</td>
+                        <td id="quotePreviousVolume">{{{ quoteData.previousVolume }}}</td>
                     </tr>
                     <tr>
                         <td>Day's range</td>
-                        <td>{{{ quoteData.low }}} - {{{ quoteData.high }}}</td><!-- low - high (both can be null) -->
+                        <td id="quoteDaysRange">{{{ quoteData.low }}} - {{{ quoteData.high }}}</td><!-- low - high (both can be null) -->
                     </tr>
                     <tr>
                         <td>Year's change</td>
-                        <td>{{{ quoteData.week52Low }}} - {{{ quoteData.week52High }}}</td>
+                        <td id="quoteYearsRange">{{{ quoteData.week52Low }}} - {{{ quoteData.week52High }}}</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <div class="col-md-8 mb-4">
+        <div class="col-md-7 mb-4">
             <h4 class="companyInfo">Company description</h4>
 
             <table class="companyDataTable">
@@ -76,9 +79,3 @@
     </div>
     
 </div>
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-<script>
-    $('#selectCompany').change(() => {
-        $('#getCompanyData').attr('action', '{{{ url }}}'+$('#selectCompany').val()).submit();
-    });
-</script>
