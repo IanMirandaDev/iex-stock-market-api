@@ -15,11 +15,12 @@ const server = createServer(app);
 const io = new Server(server);
 new SocketEventsController(io);
 
+app.use('/public', express.static(path.resolve('src', 'public')));
+
 app.set('views', path.resolve('src', 'views'));
 app.set('view engine', 'handlebars');
 app.engine('handlebars', exphbs());
 
 app.get('/', HomePageController.show);
-app.get('/:symbol', HomePageController.showCompany);
 
 server.listen(port, () => console.log(`Server is running at port ${port}`));

@@ -28,7 +28,7 @@ module.exports = {
 			description: Sequelize.DataTypes.TEXT,
 			lastUpdate: { 
 				type: Sequelize.DataTypes.DATE,
-				defaultValue: new Date(),
+				defaultValue: Sequelize.DataTypes.NOW,
 				allowNull: false
 			},
 			createdAt: {

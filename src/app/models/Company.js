@@ -14,7 +14,7 @@ Company.init({
 	description: DataTypes.TEXT,
 	lastUpdate: { 
 		type: DataTypes.DATE,
-		default: Sequelize.NOW,
+		defaultValue: DataTypes.NOW,
 		allowNull: false
 	}
 }, {

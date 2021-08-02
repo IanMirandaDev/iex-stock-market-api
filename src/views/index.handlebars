@@ -1,17 +1,16 @@
 <h1 class="companyDataTitle">Stock market companies</h1>
+
 <div class="row">
     <div class="col-md-3 mb-3">
         <form id="getCompanyData" action="{{{ url }}}" method="get">
-            <div class="row">
-                <label for="selectCompany">Select company</label>
-                <select id="selectCompany" class="form-select">
-                    <option value="">Select here</option>
-                    <option value="AAPL">Apple (AAPL)</option>
-                    <option value="TWTR">Twitter (TWTR)</option>
-                    <option value="FB">Facebook (FB)</option>
-                    <option value="AMZN">Amazon (AMZN)</option>
-                </select>
-            </div>
+            <label for="selectCompany">Select company</label>
+            <select id="selectCompany" class="form-select">
+                <option value="">Select here</option>
+                <option value="AAPL">Apple (AAPL)</option>
+                <option value="TWTR">Twitter (TWTR)</option>
+                <option value="FB">Facebook (FB)</option>
+                <option value="AMZN">Amazon (AMZN)</option>
+            </select>
         </form>
     </div>
 </div>
@@ -23,12 +22,14 @@
             <div class="companyTitle">
                 <h4 class="companyName" id="companyName">{{{ title }}}</h4>
 
-                <div class="row">
-                    <h2 class="companyQuoteValue" id="quoteLatestPrice">{{{ quoteData.latestPrice }}} <strong id="quoteChange" class="{{{ quoteData.quoteChangeClassView }}}">{{{ quoteData.quoteChange }}}</strong></h2>
-                </div>
+                <h2 class="companyQuoteValue" id="quoteLatestPrice">{{{ quoteData.latestPrice }}} <strong id="quoteChangeString" class="{{{ quoteData.quoteChangeClassView }}}">{{{ quoteData.quoteChangeString }}}</strong></h2>
             </div>
 
-            <table class="companyQuoteData">
+            <div id="quoteDataLoading" class="mt-5 d-none">
+                <div class="spinner-grow" style="width: 5rem; height: 5rem"></div>
+            </div>
+
+            <table id="quoteDataTable">
                 <tbody>
                     <tr>
                         <td>Previous close</td>
@@ -50,28 +51,32 @@
             </table>
         </div>
 
-        <div class="col-md-7 mb-4">
+        <div id="companyDataCol" class="col-md-7 mb-4">
             <h4 class="companyInfo">Company description</h4>
 
-            <table class="companyDataTable">
+            <div id="companyDataLoading" class="mt-5 d-none">
+                <div class="spinner-grow" style="width: 5rem; height: 5rem"></div>
+            </div>
+
+            <table id="companyDataTable">
                 <tbody>
                     <tr>
                         <td>Industry</td>
-                        <td>{{{ companyData.industry }}}</td>
+                        <td id="companyIndustry">{{{ companyData.industry }}}</td>
                     </tr>
                     <tr>
                         <td>Web site</td>
-                        <td>
+                        <td id="companyWebsite">
                             <a href="{{{ companyData.website }}}" target="blank">{{{ companyData.website }}}</a>
                         </td>
                     </tr>
                     <tr>
                         <td>Employees</td>
-                        <td>{{{ companyData.employees }}}</td>
+                        <td id="companyEmployees">{{{ companyData.employees }}}</td>
                     </tr>
                     <tr>
                         <td>Description</td>
-                        <td>{{{ companyData.description }}}</td>
+                        <td id="companyDescription">{{{ companyData.description }}}</td>
                     </tr>
                 </tbody>
             </table>
