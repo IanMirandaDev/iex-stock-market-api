@@ -1,6 +1,6 @@
-# IEXstockMarketAPI
+# iex-stock-market-api
 
-Developed using Node.js based system, IEXstockMarketAPI its an simple system to get stock market data from the [IEX Cloud API](https://iexcloud.io/docs/api/) and present it to user.
+Developed using Node.js based system, iex-stock-market-api its an simple system to get stock market data from the [IEX Cloud API](https://iexcloud.io/docs/api/) and present it to user.
 
 At now we have just an simple system of requests for companies and yours quotes data. The company description is saved in database at first request, and then, the newer requests for the same company will be get from your own DB 'cache' system. This cannot be done with the quotes data requests, they are changing every second and need to be always updated.
 
@@ -13,7 +13,7 @@ At now we have just an simple system of requests for companies and yours quotes 
 _at now are configured to use MySQL database_
 
 <h2 align="center"> 
-	🚧  IEXstockMarketAPI 🚀 Under construction...  🚧
+	🚧  iex-stock-market-api 🚀 Under construction...  🚧
 </h2>
 
 ## Getting started
@@ -33,7 +33,7 @@ _It's necessary an account in [IEX Cloud](https://iexcloud.io/). Create or acces
 Clone this repository by running:
 
 ```bash
-  git clone https://github.com/IanMiranda43/IEXstockMarketAPI
+  git clone https://github.com/IanMiranda43/iex-stock-market-api
 ```
 
 ### Configuring the project

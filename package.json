@@ -1,5 +1,5 @@
 {
-  "name": "iex_stock_market_api",
+  "name": "iex-stock-market-api",
   "version": "1.0.0",
   "description": "A simple stock market data fetching API",
   "main": "src/server.js",
@@ -13,9 +13,9 @@
   "author": "Ian Miranda",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/IanMiranda43/IEXstockMarketAPI/issues"
+    "url": "https://github.com/IanMiranda43/iex-stock-market-api/issues"
   },
-  "homepage": "https://github.com/IanMiranda43/IEXstockMarketAPI#readme",
+  "homepage": "https://github.com/IanMiranda43/iex-stock-market-api#readme",
   "dependencies": {
     "axios": "^0.21.1",
     "dotenv": "^10.0.0",
