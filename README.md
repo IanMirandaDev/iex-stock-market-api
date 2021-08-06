@@ -33,7 +33,7 @@ _It's necessary an account in [IEX Cloud](https://iexcloud.io/). Create or acces
 Clone this repository by running:
 
 ```bash
-  git clone https://github.com/IanMiranda43/iex-stock-market-api
+  git clone git@github.com:IanMiranda43/iex-stock-market-api.git
 ```
 
 ### Configuring the project
