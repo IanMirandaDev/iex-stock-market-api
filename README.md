@@ -1,11 +1,11 @@
 
 <h1 align="center"> 
-	🚧  iex-stock-market-api 🚀 Under construction...  🚧
+	iex-stock-market-api
 </h1>
 
 Developed using Node.js based system, iex-stock-market-api its an simple system to get stock market data from the [IEX Cloud API](https://iexcloud.io/docs/api/) and present it to user.
 
-At now we have just an simple system of requests for companies and yours quotes data. The company description is saved in database at first request, and then, the newer requests for the same company will be get from your own DB 'cache' system. This cannot be done with the quotes data requests, they are changing every second and need to be always updated.
+Its an simple system of requests for companies and yours quotes data. The company description is saved in database at first request, and then, the newer requests for the same company will be get from your own DB 'cache' system. This cannot be done with the quotes data requests, they are changing every second and need to be always updated.
 
 ### The system use: 
 * `Socket.io` for real time updates
