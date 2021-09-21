@@ -13,8 +13,10 @@ Its an simple system of requests for companies and yours quotes data. The compan
 * `express-handlebars` as server side rendering engine
 * `MySQL` as database
 * `Sequelize ORM` to manage the SQL DB
+* `Docker` to work with containers
+* `Docker-compose` to manage containers
 
-_at now are configured to use MySQL database_
+_it's configured to use MySQL database_
 
 ## Getting started
 
@@ -24,7 +26,7 @@ Before start, check if you have installed and configured the following tools:
 
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/en/)
-* [MySQL](https://www.mysql.com/)
+* [MySQL](https://www.mysql.com/) (_just if you will not run it with Docker_)
 
 _It's necessary an account in [IEX Cloud](https://iexcloud.io/). Create or access your account and then you can get your tokens into the [IEX Cloud console](https://iexcloud.io/console/)_
 
@@ -63,6 +65,39 @@ DB_PORT_PROD=3306
 ```
 _The `.env.example` file have this layout, just set your data there and remove the `.example` extension from it._
 
+## Working with Docker
+
+The project has all the Docker configurations that its needed. If do you want to run with containers, there are configured to run the node project in one and the database in another. With that your containers will be created and the project configured properly without to need any intervention before its running.
+
+The database container need to be configured with the **database**, **username** and **user password** before its builded. To make that, we have an `.env.example` file in the path `.docker/mysql/.env.example`. Copy or rename that file to `.env` and set your database config in there like bellow.
+
+
+```env
+MYSQL_ROOT_PASSWORD=root
+MYSQL_DATABASE=database
+MYSQL_USER=username
+MYSQL_PASSWORD=password
+```
+
+_remember that this credentials will be used by your system and needs to be the same that you configured at the main `.env` file in the root folder_
+
+After that, run the following to build your docker images:
+
+```bash
+docker-compose build
+```
+
+To create and start your containers, run the following command:
+
+```bash
+docker-compose up
+```
+
+## Configuring without Docker
+
+If you did not want to use Docker you can configure the server by yourself:
+
+_Remember that in this case you need to have an configured and running MySQL database_
 ### Installing the dependencies:
 
 In the project folder run de following code. This will create a `node_modules` folder and download and install all the project dependencies in there. 
@@ -78,14 +113,12 @@ The script will run the migrations and then start the application at the port se
 _Before exec it, make sure that your DB is running_
 
 ```bash
-npm run dev
+npm run start
 ```
 
-### Access the home page
+## Access the project page
 
-This can be found by access <a href="http://localhost:3000" target="blank">localhost:`PORT`<a>
-
-_The `PORT` is that you setted into the `.env` file. Default value is 3000_
+This can be found by access <a href="http://localhost:3000" target="blank">localhost:3000<a>
 
 ---
 
