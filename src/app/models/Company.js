@@ -6,20 +6,20 @@ const { Model, DataTypes } = Sequelize;
 class Company extends Model {}
 
 Company.init({
-	companyName: DataTypes.STRING(255),
-	symbol: DataTypes.STRING(255),
-	industry: DataTypes.STRING(255),
-	website: DataTypes.STRING(255),
-	employees: DataTypes.INTEGER(11),
-	description: DataTypes.TEXT,
-	lastUpdate: { 
-		type: DataTypes.DATE,
-		defaultValue: DataTypes.NOW,
-		allowNull: false
-	}
+  companyName: DataTypes.STRING(255),
+  symbol: DataTypes.STRING(255),
+  industry: DataTypes.STRING(255),
+  website: DataTypes.STRING(255),
+  employees: DataTypes.INTEGER(11),
+  description: DataTypes.TEXT,
+  lastUpdate: { 
+    type: DataTypes.DATE,
+    defaultValue: DataTypes.NOW,
+    allowNull: false
+  }
 }, {
-	sequelize, 
-	modelName: 'companies'
+  sequelize, 
+  modelName: 'companies'
 });
 
 export default Company;
