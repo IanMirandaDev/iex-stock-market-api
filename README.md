@@ -8,15 +8,13 @@ Developed using Node.js based system, iex-stock-market-api its an simple system 
 Its an simple system of requests for companies and yours quotes data. The company description is saved in database at first request, and then, the newer requests for the same company will be get from your own DB 'cache' system. This cannot be done with the quotes data requests, they are changing every second and need to be always updated.
 
 ### The system use: 
-* `Socket.io` for real time updates
+* `socket.io` for real time updates
 * `axios` for HTTP requests
 * `express-handlebars` as server side rendering engine
+* `sequelize ORM` to manage the SQL DB
 * `MySQL` as database
-* `Sequelize ORM` to manage the SQL DB
 * `Docker` to work with containers
 * `Docker-compose` to manage containers
-
-_it's configured to use MySQL database_
 
 ## Getting started
 
@@ -26,6 +24,7 @@ Before start, check if you have installed and configured the following tools:
 
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/en/)
+* [Docker](https://www.docker.com/) (_just if you want to run the system with the automatic docker default configuration_)
 * [MySQL](https://www.mysql.com/) (_just if you will not run it with Docker_)
 
 _It's necessary an account in [IEX Cloud](https://iexcloud.io/). Create or access your account and then you can get your tokens into the [IEX Cloud console](https://iexcloud.io/console/)_
