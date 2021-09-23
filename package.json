@@ -5,9 +5,9 @@
   "main": "src/server.js",
   "type": "module",
   "scripts": {
-    "predev": "NODE_ENV='development' npx sequelize db:migrate",
+    "build:dev-db": "NODE_ENV='development' npx sequelize db:migrate",
     "dev": "NODE_ENV='development' nodemon src/server.js",
-    "prestart": "NODE_ENV='production' npx sequelize db:migrate",
+    "build:db": "NODE_ENV='production' npx sequelize db:migrate",
     "start": "NODE_ENV='production' node src/server.js"
   },
   "author": "Ian Miranda",
