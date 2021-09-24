@@ -17,7 +17,7 @@ services:
     build: ./.docker/mysql/
     ports: 
       - 3306:3306
-    restart: always
+    restart: on-failure
     env_file: ./.docker/mysql/.env
     volumes: 
       - ./.docker/dbdata:/var/lib/mysql
